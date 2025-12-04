@@ -8,6 +8,7 @@ import ButtonImage2 from "@/app/assets/images/slider-31-100x50.jpg";
 import Slide_1 from "./Slide_1";
 import Slide_2 from "./Slide_2";
 import Image from "next/image";
+import WaveDivider from "@/components/WaveDivider";
 
 const slides = [Slide_1, Slide_2];
 
@@ -89,7 +90,10 @@ const Hero = () => {
           className="absolute inset-0 w-full h-full"
         >
           <CurrentSlide />
+                              <WaveDivider/>
+
         </motion.div>
+
       </AnimatePresence>
 
       {/* Navigation Buttons */}
@@ -250,6 +254,7 @@ const Hero = () => {
       >
         Use arrow keys to navigate
       </motion.div>
+
     </div>
   );
 };
