@@ -1,11 +1,18 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Open_Sans, } from "next/font/google";
+import { Geist, Geist_Mono, Open_Sans, Concert_One } from "next/font/google";
 import "./globals.css";
+import Header from "./layout/Header";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
 });
+
+const concertOne = Concert_One({
+  variable: "--font-concert-one",
+  subsets: ["latin"],
+  weight: "400",
+}); 
 
 const openSans = Open_Sans({
   variable: "--font-open-sans",
@@ -30,8 +37,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${openSans.variable} flex flex-col min-h-screen antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${openSans.variable} ${concertOne.variable} flex flex-col min-h-screen antialiased`}
       >
+        <Header/>  
         {children}
       </body>
     </html>
