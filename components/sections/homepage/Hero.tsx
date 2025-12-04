@@ -5,7 +5,6 @@ import { AnimatePresence, motion, Variants } from "framer-motion";
 import { ChevronLeft, ChevronRight, Pause, Play } from "lucide-react";
 import ButtonImage1 from "@/app/assets/images/slide2-100x50.jpg";
 import ButtonImage2 from "@/app/assets/images/slider-31-100x50.jpg";
-// Import slides as components
 import Slide_1 from "./Slide_1";
 import Slide_2 from "./Slide_2";
 import Image from "next/image";
@@ -14,8 +13,8 @@ const slides = [Slide_1, Slide_2];
 
 const Hero = () => {
   const [index, setIndex] = useState(0);
-  const [direction, setDirection] = useState(0); // Track slide direction
-  const [isPlaying, setIsPlaying] = useState(true); // Auto-play state
+  const [direction, setDirection] = useState(0); 
+  const [isPlaying, setIsPlaying] = useState(true);
 
   // Auto-play functionality
   useEffect(() => {
@@ -23,7 +22,7 @@ const Hero = () => {
 
     const interval = setInterval(() => {
       next();
-    }, 5000); // Change slide every 5 seconds
+    }, 5000); 
 
     return () => clearInterval(interval);
   }, [index, isPlaying]);
