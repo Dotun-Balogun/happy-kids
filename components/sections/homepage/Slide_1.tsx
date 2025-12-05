@@ -4,6 +4,8 @@ import Image from 'next/image'
 import React from 'react'
 import { motion, Variants } from 'framer-motion'
 import slidebackground from '@/app/assets/images/slider-1.jpg'
+import WaveDivider from '@/components/WaveDivider'
+import Header from '@/app/layout/Header'
 
 const Slide_1 = () => {
   const containerVariants:Variants = {
@@ -62,7 +64,9 @@ const Slide_1 = () => {
           className="object-cover"
           priority
         />
+        
       </motion.div>
+                <Header/>  
 
       <div className="relative z-10 h-full container mx-auto px-4 flex items-center">
 
@@ -105,6 +109,8 @@ const Slide_1 = () => {
 
         </motion.div>
       </div>
+            <WaveDivider className='absolute bottom-0 left-0 '/>
+  
     </section>
   )
 }

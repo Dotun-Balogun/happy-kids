@@ -39,7 +39,6 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${openSans.variable} ${concertOne.variable} flex flex-col min-h-screen antialiased`}
       >
-        <Header/>  
         {children}
       </body>
     </html>

@@ -5,6 +5,8 @@ import Image from 'next/image'
 import { motion } from 'framer-motion'
 import slideImage from '@/app/assets/images/slide2.jpg'
 import { fadeIn,slideTop,  staggerContainer } from '@/app/styles/animation'
+import WaveDivider from '@/components/WaveDivider'
+import Header from '@/app/layout/Header'
 
 
 
@@ -25,9 +27,10 @@ const Slide_2 = () => {
           className="object-cover object-center"
         />
       </motion.div>
+                <Header/>  
 
       <div className="relative z-10 h-full flex py-10 justify-center px-4">
-        
+
         <motion.div
           className="max-w-3xl text-center"
           variants={staggerContainer}
@@ -56,6 +59,8 @@ const Slide_2 = () => {
         </motion.div>
 
       </div>
+                  <WaveDivider className='absolute bottom-0 left-0 '/>
+      
     </section>
   )
 }

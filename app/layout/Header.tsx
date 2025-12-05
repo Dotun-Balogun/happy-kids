@@ -14,7 +14,7 @@ const Header = () => {
   const toggleMenu = () => setIsOpen(!isOpen)
 
   return (
-    <header className=" font-concert-one relative  z-50">
+    <header className=" font-concert-one relative bg-white/40  z-50">
       <div className="container  mx-auto px-4 flex items-center flex flex-row items-cente justify-between w-full">
          
         <Link href={'/'} className="w-[200px] h-[58px] lg:w-[300px] lg:h-[86px]">
