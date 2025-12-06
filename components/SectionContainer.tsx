@@ -33,8 +33,9 @@ export default function  SectionContainer ({
 
       {/* Content Section */}
       <section
-        className={`w-full ${padding} ${className}`}
+        className={`w-full ${padding} ${className} `}
         style={{ backgroundColor: bgColor }}
+      
       >
         {children}
       </section>
