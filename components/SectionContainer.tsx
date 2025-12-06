@@ -19,11 +19,12 @@ export default function  SectionContainer ({
   padding = "",
   topWave = true,
   bottomWave = true,
+  
   className = "",
   children,
 }: SectionContainerProps) {
   return (
-    <div className="relative w-full">
+    <div className={`relative h-full w-full `} >
       {/* Top Wave */}
       {topWave && (
         <div className="w-full" style={{ marginBottom: 0 }}>
@@ -33,7 +34,7 @@ export default function  SectionContainer ({
 
       {/* Content Section */}
       <section
-        className={`w-full ${padding} ${className} `}
+        className={`w-full min-h-[200px ${padding} ${className} `}
         style={{ backgroundColor: bgColor }}
       
       >

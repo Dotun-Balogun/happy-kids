@@ -9,7 +9,7 @@ import { ArrowRight } from 'lucide-react'
 const AboutSection = () => {
   return (
     <div className='w-full container mx-auto px-4'>
-      <SectionContainer topWave={false} bottomWave={false} className='  flex flex-col md:flex-row items-cente  justify-center py-12 md:py-20 gap-8 md:gap-16'>
+      <SectionContainer topWave={false} bottomWave={false} className='  flex flex-col md:flex-row items-cente justify-center py-12  gap-8 md:gap-16'>
       <div className='max-w-md h-[317px] w-[317px] md:w-[500px] md:h-[500px]'>
          <Image
           src={KidsImage}
