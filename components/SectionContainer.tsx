@@ -1,50 +1,50 @@
-"use client";
-
-import React from "react";
 import WaveDivider from "./WaveDivider";
 
+// SectionContainer Component
 type SectionContainerProps = {
-  bgColor?: string;         // Background color of the whole section
-  waveColor?: string;       // Color of the top + bottom waves
-  padding?: string;         // Tailwind padding (default: py-20)
-  topWave?: boolean;        // Toggle top wave
-  bottomWave?: boolean;     // Toggle bottom wave
-  className?: string;       // Extra styles
-  children: React.ReactNode;
+  bgColor?: string;
+  waveColor?: string;
+  waveHeight?: number;
+  padding?: string;
+  topWave?: boolean;
+  bottomWave?: boolean;
+  className?: string;
+  children?: React.ReactNode;
 };
 
-const SectionContainer = ({
+export default function  SectionContainer ({
   bgColor = "#ffffff",
   waveColor = "#ffffff",
-  padding = "py-20",
+  waveHeight = 100,
+  padding = "",
   topWave = true,
   bottomWave = true,
-  className,
+  className = "",
   children,
-}: SectionContainerProps) => {
+}: SectionContainerProps) {
   return (
-    <section
-      className={`relative w-full overflow-hidden ${padding} ${className ?? ""}`}
-      style={{ backgroundColor: bgColor }}
-    >
+    <div className="relative w-full">
       {/* Top Wave */}
       {topWave && (
-        <div className="absolute top-0 left-0 w-full -translate-y-full">
-          <WaveDivider position="top" color={waveColor} height={100} />
+        <div className="w-full" style={{ marginBottom: 0 }}>
+          <WaveDivider position="bottom" color={waveColor} height={waveHeight} />
         </div>
       )}
 
-      {/* Content */}
-      <div className="relative z-10">{children}</div>
+      {/* Content Section */}
+      <section
+        className={`w-full ${padding} ${className}`}
+        style={{ backgroundColor: bgColor }}
+      >
+        {children}
+      </section>
 
       {/* Bottom Wave */}
       {bottomWave && (
-        <div className="absolute bottom-0 left-0 w-full translate-y-full">
-          <WaveDivider position="bottom" color={waveColor} height={100} />
+        <div className="w-full" style={{ marginTop: 0 }}>
+          <WaveDivider position="top" color={waveColor} height={waveHeight} />
         </div>
       )}
-    </section>
+    </div>
   );
 };
-
-export default SectionContainer;
