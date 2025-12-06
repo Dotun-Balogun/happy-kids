@@ -139,8 +139,8 @@ const Hero = () => {
           onClick={next}
           className="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 
                      bg-white/80 hover:bg-white text-primary 
-                     w-12 h-12 md:w-14 md:h-14 rounded-full 
-                     flex items-center justify-center
+                     w-12 h-12 md:w-14 md:h-14 rounded-full hidden
+                     lg:flex items-center justify-center
                      shadow-lg hover:shadow-xl
                      transition-all duration-300
                      pointer-events-auto
@@ -210,8 +210,8 @@ const Hero = () => {
         onClick={togglePlayPause}
         className="absolute bottom-8 right-8 
                    bg-white/80 hover:bg-white text-primary 
-                   w-10 h-10 md:w-12 md:h-12 rounded-full 
-                   flex items-center justify-center
+                   w-10 h-10 md:w-12 md:h-12 rounded-full hidden
+                   lg:flex items-center justify-center
                    shadow-lg hover:shadow-xl
                    transition-all duration-300
                    z-30
