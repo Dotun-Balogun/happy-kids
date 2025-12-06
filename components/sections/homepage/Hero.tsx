@@ -104,7 +104,8 @@ const Hero = () => {
           className="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 
                      bg-white/80 hover:bg-white text-primary 
                      w-12 h-12 md:w-14 md:h-14 rounded-full 
-                     flex items-center justify-center
+                      items-center justify-center hidden
+                     lg:flex
                      shadow-lg hover:shadow-xl
                      transition-all duration-300
                      pointer-events-auto
@@ -152,7 +153,7 @@ const Hero = () => {
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.5 }}
         >
-          <ChevronRight className="w-6 h-6 md:w-7 md:h-7 absolute transition-all duration-300 group-hover:opacity-0 group-hover:scale-50" />
+          <ChevronRight className=" w-6 h-6 md:w-7 md:h-7 absolute transition-all duration-300 group-hover:opacity-0 group-hover:scale-50" />
           
           <motion.div
             className="absolute inset-0 opacity-0 group-hover:opacity-100 flex items-center justify-center"
