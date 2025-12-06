@@ -38,7 +38,7 @@ const AboutSection = () => {
             <span className="text-[20px] text-[#666666] mt-[20px] px-4">Let's be happy and smiling together</span>
             </HeadingWithFaintText>
             <div>
-              <p className="text-[18px]  text-[#666666] text-center md:text-left">
+              <p className="text-[18px] px-2 text-[#666666] text-center md:text-left">
                 <strong>Happy Kids</strong> continuous diagnostic gathers
                  as much information as possible about students' knowledge
                   in order to recommend the skills that will challenge them at
