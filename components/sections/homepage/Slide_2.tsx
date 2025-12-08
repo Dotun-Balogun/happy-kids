@@ -4,16 +4,13 @@ import React from 'react'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 import slideImage from '@/app/assets/images/slide2.jpg'
-import { fadeIn,slideTop,  staggerContainer } from '@/app/styles/animation'
-import WaveDivider from '@/components/WaveDivider'
+import { fadeIn, slideTop, staggerContainer } from '@/app/styles/animation'
 import Header from '@/app/layout/Header'
-
-
 
 const Slide_2 = () => {
   return (
-    <section className="relative w-full h-[50vh] lg:h-screen overflow-hidden">
-
+    <section className="relative w-full h-[70vh] lg:h-screen overflow-hidden">
+      {/* Background Image */}
       <motion.div
         className="absolute inset-0 z-0"
         variants={fadeIn}
@@ -27,10 +24,14 @@ const Slide_2 = () => {
           className="object-cover object-center"
         />
       </motion.div>
-                <Header/>  
 
-      <div className="relative z-10 h-full flex py-10 justify-center px-4">
+      {/* Header - Absolute positioned */}
+      <div className="absolute top-0 left-0 right-0 z-900">
+        <Header variant="absolute" transparent />
+      </div>
 
+      {/* Content - Now centered properly */}
+      <div className="relative z-10 h-full flex items-center justify-center px-4">
         <motion.div
           className="max-w-3xl text-center"
           variants={staggerContainer}
@@ -57,10 +58,7 @@ const Slide_2 = () => {
             className="mx-auto mt-6 w-32 h-1 bg-secondary rounded-full"
           />
         </motion.div>
-
       </div>
-                  <WaveDivider className='absolute bottom-0 left-0 '/>
-      
     </section>
   )
 }

@@ -35,7 +35,7 @@ const NavLink = ({ handleLinkClick, isOpen }: NavItemsProps) => {
   ]
 
   return (
-    <div className="flex flex-col font-concert-one lg:flex-row lg:items-center px-4 space-y-4 md:space-y-0 md:space-x-4">
+    <div className="z-500 h-full flex flex-col font-concert-one lg:flex-row lg:items-center px-4 space-y-4 md:space-y-0 md:space-x-4">
       <div className="lg:hidden w-[200px] h-[58px] lg:w-[300px] lg:h-[86px]">
         <Image src={logo} alt="Happy Kids Logo" width={300} height={86} />
       </div>

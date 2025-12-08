@@ -4,11 +4,10 @@ import Image from 'next/image'
 import React from 'react'
 import { motion, Variants } from 'framer-motion'
 import slidebackground from '@/app/assets/images/slider-1.jpg'
-import WaveDivider from '@/components/WaveDivider'
 import Header from '@/app/layout/Header'
 
 const Slide_1 = () => {
-  const containerVariants:Variants = {
+  const containerVariants: Variants = {
     hidden: { opacity: 0, y: 20 },
     visible: {
       opacity: 1,
@@ -22,12 +21,12 @@ const Slide_1 = () => {
     }
   }
 
-  const wordVariants:Variants = {
+  const wordVariants: Variants = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0 }
   }
 
-  const subheadingVariants:Variants = {
+  const subheadingVariants: Variants = {
     hidden: { opacity: 0, x: -30 },
     visible: {
       opacity: 1,
@@ -36,7 +35,7 @@ const Slide_1 = () => {
     }
   }
 
-  const imageVariants:Variants = {
+  const imageVariants: Variants = {
     hidden: { scale: 1.2, opacity: 0 },
     visible: {
       scale: 1,
@@ -49,8 +48,8 @@ const Slide_1 = () => {
   const words = heading.split(" ")
 
   return (
-    <section className="w-full relative h-[50vh] lg:h-screen overflow-hidden">
-
+    <section className="w-full relative h-[70vh] lg:h-screen overflow-hidden">
+      {/* Background Image */}
       <motion.div 
         className="absolute inset-0 z-0"
         variants={imageVariants}
@@ -64,20 +63,21 @@ const Slide_1 = () => {
           className="object-cover"
           priority
         />
-        
       </motion.div>
-                <Header/>  
 
+      {/* Header - Absolute positioned, doesn't take space */}
+      <div className="absolute top-0 left-0 right-0 z-800">
+        <Header variant="absolute" transparent />
+      </div>
+
+      {/* Content - Now has full height */}
       <div className="relative z-10 h-full container mx-auto px-4 flex items-center">
-
-        {/* MAIN ANIMATION WRAPPER */}
         <motion.div
-          className=" max-w-[300px] md:max-w-2xl"
+          className="max-w-[300px] md:max-w-2xl"
           variants={containerVariants}
           initial="hidden"
           animate="visible"
         >
-
           {/* STAGGERED HEADING */}
           <h1 className="text-primary font-bold text-[22px] md:text-[30px] lg:text-[50px] leading-tight mb-4 flex flex-wrap">
             {words.map((word, index) => (
@@ -106,11 +106,8 @@ const Slide_1 = () => {
             animate={{ width: "100%", opacity: 1 }}
             transition={{ duration: 0.8, delay: 1.3 }}
           />
-
         </motion.div>
       </div>
-            <WaveDivider className='absolute bottom-0 left-0 '/>
-  
     </section>
   )
 }

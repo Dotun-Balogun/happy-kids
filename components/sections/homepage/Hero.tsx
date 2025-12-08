@@ -53,8 +53,8 @@ const Hero = () => {
   const slideVariants:Variants = {
     enter: (direction: number) => ({
       x: direction > 0 ? "100%" : "-100%",
-      opacity: 0,
-      scale: 0.9
+      opacity: 1,
+      scale: 1
     }),
     center: {
       x: 0,
@@ -67,8 +67,8 @@ const Hero = () => {
     },
     exit: (direction: number) => ({
       x: direction > 0 ? "-100%" : "100%",
-      opacity: 0,
-      scale: 0.9,
+      opacity: 1,
+      scale: 1,
       transition: {
         duration: 0.8,
         ease: [0.32, 0.72, 0, 1]
@@ -77,9 +77,9 @@ const Hero = () => {
   };
 
   return (
-    <div className="relative w-full h-[50vh] lg:h-screen overflow-hidden bg-gray-900">
+    <div className="relative w-full h-[70vh] lg:h-screen  overflow-hidde ">
       {/* Slides */}
-      <AnimatePresence initial={false} custom={direction} mode="wait">
+      <AnimatePresence initial={false} custom={direction} >
         <motion.div
           key={index}
           custom={direction}
@@ -90,11 +90,15 @@ const Hero = () => {
           className="absolute inset-0 w-full h-full"
         >
           <CurrentSlide />
-                              <WaveDivider/>
 
         </motion.div>
 
       </AnimatePresence>
+       <WaveDivider 
+        position="bottom" 
+        color="#ffffff" 
+        className="h-[60px] md:h-[100px] lg:h-[120px] absolute bottom-0 left-0 w-full" 
+      />
 
       {/* Navigation Buttons */}
       <div className="absolute inset-0 pointer-events-none z-20">
