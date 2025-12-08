@@ -1,25 +1,96 @@
+'use client'
+
 import Image from 'next/image'
-import React from 'react'
-import kid1 from '@/app/assets/images/kid1.png'
+import React, { useState } from 'react'
+import { motion } from 'framer-motion'
+import { Service } from '@/app/data/Service'
 
-const ServiceCard = () => {
+interface ServiceCardProps {
+  service: Service
+}
+
+const ServiceCard = ({ service }: ServiceCardProps) => {
+  const [isHovered, setIsHovered] = useState(false)
+
   return (
-   <div className='w-[400px] h-[600px] flex flex-col gap-4 px-4'>
-<div className='relative w-[332px] h-[332px] rounded-full p-2 border border-dotted border-primary'>
-        
-        <Image src={kid1} alt='service image' width={332} height={332} className='rounded-full'/>
-        <div className='absolute bottom-0 left-1/2 transform -translate-x-1/2 bg-white bg-opacity-80 px-4 py-2 rounded-[30px] text-center w-[80%]'>
-            <h2 className='text-2xl font-semibold '>Kidar<span className='text-primary'>garte</span></h2>            
-        </div>
-        </div>
+    <motion.div 
+      className='w-full max-w-[350px] sm:max-w-[380px] md:max-w-[400px] lg:max-w-[420px] 
+                 min-h-[500px] sm:min-h-[550px] md:min-h-[600px] 
+                 flex flex-col justify-center gap-4 px-4 mx-auto'
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-100px" }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+    >
+      {/* Image Circle Container */}
+      <motion.div 
+        className='relative w-[280px] h-[280px] 
+                   sm:w-[320px] sm:h-[320px] 
+                   md:w-[332px] md:h-[332px] 
+                   lg:w-[395px] lg:h-[395px] 
+                   rounded-full p-2 border-2 border-dotted border-primary
+                   mx-auto overflow-hidde cursor-pointer'
+        onHoverStart={() => setIsHovered(true)}
+        onHoverEnd={() => setIsHovered(false)}
+        onTapStart={() => setIsHovered(true)}
+        onTap={() => setTimeout(() => setIsHovered(false), 2000)}
+        whileHover={{ scale: 1.02 }}
+        transition={{ duration: 0.3 }}
+      >
+        {/* Image with zoom effect */}
+        <motion.div
+          className='relative w-full h-full rounded-full overflow-hidden'
+          animate={{ 
+            scale: isHovered ? 1.15 : 1,
+          }}
+          transition={{ duration: 0.5, ease: "easeInOut" }}
+        >
+          <Image 
+            src={service.image} 
+            alt={`${service.title}${service.highlightText} service`} 
+            fill
+            className='object-cover rounded-full'
+            sizes='(max-width: 640px) 280px, (max-width: 768px) 320px, (max-width: 1024px) 332px, 395px'
+          />
+        </motion.div>
 
-        <div className='p-[30px]'>
-            <p className='text-center text-[18px] '> 
-                Happy Kids offers a wide range of premium services designed to nurture and educate children in a fun and engaging environment. Our services include interactive learning sessions, creative arts and crafts, physical activities, and personalized care plans to ensure each child's unique needs are met. With experienced staff and a safe, welcoming atmosphere, we strive to provide the best possible experience for both children and their parents.  
-                </p>
-        </div>
-   </div>
-    
+        {/* Floating Tag */}
+        <motion.div 
+          className='absolute left-1/2 bg-white bg-opacity-90 backdrop-blur-sm 
+                     px-4 py-2 sm:px-6 sm:py-3 rounded-[30px] text-center 
+                     w-[80%] shadow-lg'
+          initial={{ bottom: -4, x: '-50%' }}
+          animate={{ 
+            bottom: isHovered ? '50%' : -4,
+            y: isHovered ? '50%' : 0,
+            x: '-50%',
+            scale: isHovered ? 1.1 : 1
+          }}
+          transition={{ 
+            duration: 0.5, 
+            ease: [0.34, 1.56, 0.64, 1] 
+          }}
+        >
+          <h2 className='text-xl sm:text-2xl md:text-3xl font-bold font-concert-one'>
+            {service.title}
+            <span className='text-primary'>{service.highlightText}</span>
+          </h2>
+        </motion.div>
+      </motion.div>
+
+      {/* Description */}
+      <motion.div 
+        className='p-4 sm:p-6 md:p-[30px]'
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ delay: 0.3, duration: 0.5 }}
+      >
+        <p className='text-center text-sm sm:text-base md:text-[18px] leading-relaxed text-gray-700'>
+          {service.description}
+        </p>
+      </motion.div>
+    </motion.div>
   )
 }
 

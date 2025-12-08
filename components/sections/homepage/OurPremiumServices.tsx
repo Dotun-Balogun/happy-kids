@@ -3,9 +3,9 @@ import React from 'react'
 import Image from 'next/image'
 import { Dot } from 'lucide-react'
 import ServiceCard from '@/components/ui/cards/ServiceCard'
+import { servicesData } from '@/app/data/Service'
 const OurPremiumServices = () => {
   return (
-    <section>
       <SectionContainer bgColor='#ffff94' waveColor='#ffff94' topWave={true} bottomWave={true} className='  relative overflow-hidden '>
 
 
@@ -17,12 +17,22 @@ const OurPremiumServices = () => {
               Our <span className="text-primary">Premium</span> Services
             </span>
           </h1>
+
+
+          
         </div>
-  <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-8 place-items-center px-4'>
-    <ServiceCard/>
-  </div>
+        <section className=''>
+
+
+            {/* Services Grid */}
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 place-items-center
+                        gap-8 md:gap-10 lg:gap-12 '>
+              {servicesData.map((service) => (
+                <ServiceCard key={service.id} service={service} />
+              ))}
+          </div>
+        </section>
       </SectionContainer>
-    </section>
   )
 }
 
