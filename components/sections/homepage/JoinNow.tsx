@@ -54,14 +54,14 @@ const JoinNow = () => {
       whileHover={{ x: 5, transition: { duration: 0.2 } }}
     >
       <motion.div 
-        className='w-10 h-10 rounded-full bg-secondary hover:bg-primary flex items-center justify-center flex-shrink-0'
+        className='w-10 h-10 rounded-full bg-secondary hover:bg-primary flex items-center justify-center shrink-0'
         whileHover={{ scale: 1.1, rotate: 360 }}
         transition={{ duration: 0.5 }}
       >
         <span className='text-white text-xl font-bold'>✓</span>
       </motion.div>
 
-      <p className='text-white text-base lg:text-lg font-medium'>
+      <p className='text-primary text-base lg:text-lg font-medium'>
         {item.text}
       </p>
     </motion.div>
