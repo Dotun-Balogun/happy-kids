@@ -1,23 +1,27 @@
 import SectionContainer from '@/components/SectionContainer'
 import React from 'react'
 import Image from 'next/image'
-import background from '@/app/assets/images/toybg2.png'
+import { Dot } from 'lucide-react'
+import ServiceCard from '@/components/ui/cards/ServiceCard'
 const OurPremiumServices = () => {
   return (
     <section>
-        <SectionContainer bgColor='#ffff94' waveColor='#ffff94'  topWave={true} bottomWave={true} className='  relative h-[400px] md:h-[500px] lg:h-[600px] overflow-hidden '>
-                  <Image
-                  src={background}
-                  alt='bakground with toys'
-                  fill
-                  className='bg-cover w-full h-full '
+      <SectionContainer bgColor='#ffff94' waveColor='#ffff94' topWave={true} bottomWave={true} className='  relative overflow-hidden '>
 
 
-                  />
-             <div className='relative z-10 w-full h-full flex flex-col items-center justify-center px-4 text-center'>
-        jjjjj
-             </div>
-        </SectionContainer>
+        <div className='container mx-auto px-4 h-full flex flex-col lg:flex-row justify-center gap-8 lg:gap-16 '>
+          <h1 className="flex items-center justify-center gap-1 text-3xl font-bold text-center md:text-4xl lg:justify-start lg:text-left lg:text-5xl">
+            <Dot size={90} className=" text-primary" />
+
+            <span>
+              Our <span className="text-primary">Premium</span> Services
+            </span>
+          </h1>
+        </div>
+  <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-8 place-items-center px-4'>
+    <ServiceCard/>
+  </div>
+      </SectionContainer>
     </section>
   )
 }
