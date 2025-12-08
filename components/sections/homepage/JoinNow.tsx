@@ -37,7 +37,7 @@ const JoinNow = () => {
 
             </div>
              <motion.div 
-              className='grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4'
+              className='grid grid-cols-1 sm:grid-cols-2 gap-4 mt-10 pt-4'
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
@@ -58,10 +58,10 @@ const JoinNow = () => {
         whileHover={{ scale: 1.1, rotate: 360 }}
         transition={{ duration: 0.5 }}
       >
-        <span className='text-white text-xl font-bold'>✓</span>
+        <span className='text-primary text-xl font-bold'>✓</span>
       </motion.div>
 
-      <p className='text-primary text-base lg:text-lg font-medium'>
+      <p className='text-white text-base lg:text-lg font-medium'>
         {item.text}
       </p>
     </motion.div>
