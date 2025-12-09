@@ -27,7 +27,7 @@ const Slide_2 = () => {
 
       {/* Header - Absolute positioned */}
       <div className="absolute top-0 left-0 right-0 z-900">
-        <Header variant="absolute" transparent />
+        <Header variant="absolute"  />
       </div>
 
       {/* Content - Now centered properly */}

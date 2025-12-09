@@ -67,7 +67,7 @@ const Slide_1 = () => {
 
       {/* Header - Absolute positioned, doesn't take space */}
       <div className="absolute top-0 left-0 right-0 z-800">
-        <Header variant="absolute" transparent />
+        <Header variant="absolute"  />
       </div>
 
       {/* Content - Now has full height */}
