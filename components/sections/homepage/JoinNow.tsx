@@ -15,12 +15,12 @@ const JoinNow = () => {
               <h2 className='text-[32px] md:text-4xl lg:text-[50px] font-concert-one font-bold text-white text-center lg:text-left'>
                 Ready to <span className='text-yellow-300'>Join</span> Us?
               </h2>
-              <span className="text-[20px] text-white mt-20 px-4">Let's be happy and smiling together</span>
+              <p className="text-[20px] text-white mt-20 px-4 text-center lg:text-left">Let's be happy and smiling together</p>
 
             </HeadingWithFaintText>
             <div>
                <motion.p
-              className='text-white/80 text-base lg:text-lg leading-relaxed max-w-xl'
+              className='text-white/80 text-base text-center md:text-left lg:text-lg leading-relaxed max-w-xl'
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -37,7 +37,7 @@ const JoinNow = () => {
 
             </div>
              <motion.div 
-              className='grid grid-cols-1 sm:grid-cols-2 gap-4 mt-10 pt-4'
+              className='grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4  lg:mt-10 pt-4'
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}

@@ -36,7 +36,7 @@ const ClassCard = ({ classItem }: ClassCardProps) => {
         max-w-[340px] w-full h-[289px] 
         lg:max-w-[290px] lg:h-[305px]
         p-6 rounded-[30px] 
-        flex flex-col gap-4
+        flex flex-col items-center md:items-start gap-4
         cursor-pointer
         transition-colors duration-300
         shadow-md hover:shadow-xl
@@ -78,10 +78,10 @@ const ClassCard = ({ classItem }: ClassCardProps) => {
       </motion.div>
 
       {/* Content */}
-      <div className='flex flex-col gap-3 mt-2'>
+      <div className='flex flex-col gap-3 mt-2 text-center md:text-left'>
         {/* Title */}
         <motion.h3 
-          className='text-[26px] lg:text-[30px] font-bold font-concert-one leading-tight'
+          className='text-[26px] lg:text-[30px]  font-bold font-concert-one leading-tight'
           animate={{
             x: isHovered ? 5 : 0
           }}
