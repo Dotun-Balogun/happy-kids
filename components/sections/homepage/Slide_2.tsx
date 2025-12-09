@@ -28,7 +28,7 @@ const Slide_2 = () => {
         <Header variant="absolute"  />
       </div>
 
-      <div className="relative z-10 h-full flex  mt-30 lg:items-center justify-center px-4">
+      <div className="relative z-10 h-full flex  mt-30  md:mt-0 lg:items-center justify-center px-4">
         <motion.div
           className="max-w-3xl text-center"
           variants={staggerContainer}
