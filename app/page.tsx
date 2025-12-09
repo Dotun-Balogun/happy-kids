@@ -3,6 +3,7 @@ import React from 'react'
 import AboutSection from '@/components/sections/homepage/AboutSection'  
 import OurPremiumServices from '@/components/sections/homepage/OurPremiumServices'
 import JoinNow from '@/components/sections/homepage/JoinNow'
+import Testimonials from '@/components/sections/homepage/Testimonials'
 const page = () => {
   return (
     <div> 
@@ -10,6 +11,7 @@ const page = () => {
       <AboutSection/>
       <OurPremiumServices/>
       <JoinNow/>
+      <Testimonials/>
     </div>
   )
 }
