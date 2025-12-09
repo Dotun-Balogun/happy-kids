@@ -65,14 +65,13 @@ const Slide_1 = () => {
         />
       </motion.div>
 
-      {/* Header - Absolute positioned, doesn't take space */}
       <div className="absolute top-0 left-0 right-0 z-800">
         <Header variant="absolute"  />
       </div>
 
-      <div className="relative z-10 h-full container mx-auto px-4 flex items-center">
+      <div className="relative z-10 h-full container mx-auto px-4 flex items-start py-30 md:items-center">
         <motion.div
-          className="max-w-[300px] max-w-md md:max-w-2xl"
+          className="max-w-[300px] w-[200px]  md:max-w-2xl lg:w-md"
           variants={containerVariants}
           initial="hidden"
           animate="visible"

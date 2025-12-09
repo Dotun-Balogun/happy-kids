@@ -10,7 +10,6 @@ import Header from '@/app/layout/Header'
 const Slide_2 = () => {
   return (
     <section className="relative w-full h-[70vh] lg:h-screen overflow-hidden">
-      {/* Background Image */}
       <motion.div
         className="absolute inset-0 z-0"
         variants={fadeIn}
@@ -25,13 +24,11 @@ const Slide_2 = () => {
         />
       </motion.div>
 
-      {/* Header - Absolute positioned */}
       <div className="absolute top-0 left-0 right-0 z-900">
         <Header variant="absolute"  />
       </div>
 
-      {/* Content - Now centered properly */}
-      <div className="relative z-10 h-full flex items-center justify-center px-4">
+      <div className="relative z-10 h-full flex  mt-30 lg:items-center justify-center px-4">
         <motion.div
           className="max-w-3xl text-center"
           variants={staggerContainer}
