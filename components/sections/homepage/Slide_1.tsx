@@ -70,10 +70,9 @@ const Slide_1 = () => {
         <Header variant="absolute"  />
       </div>
 
-      {/* Content - Now has full height */}
       <div className="relative z-10 h-full container mx-auto px-4 flex items-center">
         <motion.div
-          className="max-w-[300px] md:max-w-2xl"
+          className="max-w-[300px] max-w-md md:max-w-2xl"
           variants={containerVariants}
           initial="hidden"
           animate="visible"

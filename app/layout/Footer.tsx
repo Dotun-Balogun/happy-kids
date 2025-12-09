@@ -6,8 +6,8 @@ import UsefulLinksSection from "./Footer/UsefulLinkSection"
 
 const Footer = () => {
   return (
-    <footer className="bg-linear-to-br from-[#FF6B7A] to-[#FF8A95] text-white">
-      <WaveDivider position="top" />
+    <footer className="bg-primary text-white">
+      <WaveDivider position ='top'/>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
           <FooterAbout/>
