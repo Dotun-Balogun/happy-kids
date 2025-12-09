@@ -30,7 +30,7 @@ const Testimonials = () => {
             faintTextClassName='top-2 left-1/2 -translate-x-1/2 text-primary text-[48px] font-bold opacity-10 lg:opacity-20'
           >
             <h2 className='text-[32px] md:text-4xl lg:text-[50px] font-concert-one font-bold text-center'>
-              What Our Happy Kids Are Saying
+              What Our {" "} <span className='text-primary'>Happy Kids</span>{" "}Are Saying
             </h2>
           </HeadingWithFaintText>
         </motion.div>

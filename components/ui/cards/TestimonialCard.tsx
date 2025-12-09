@@ -13,7 +13,6 @@ type TestimonialCardProps = {
 const TestimonialCard = ({ testimonial, index = 0 }: TestimonialCardProps) => {
   const [isHovered, setIsHovered] = useState(false)
 
-  // Generate stars based on rating
   const renderStars = () => {
     return Array.from({ length: 5 }, (_, i) => (
       <motion.span
