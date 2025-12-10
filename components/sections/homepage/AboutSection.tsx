@@ -35,7 +35,7 @@ const AboutSection = () => {
                     </span>
                   </span>
                 </h1>
-            <span className="text-[20px] text-[#666666] mt-[20px] px-4">Let's be happy and smiling together</span>
+            <span className="text-[20px] text-[#666666] mt-5 px-4">Let's be happy and smiling together</span>
             </HeadingWithFaintText>
             <div>
               <p className="text-[18px] px-2 text-[#666666] text-center md:text-left">
@@ -47,13 +47,13 @@ const AboutSection = () => {
 
 
               <div className='flex flex-col gap-4 md:flex-row items-center'>
-                <Button  className="mt-6 w-[192px] h-[42px] bg-primary text-white font-semibold rounded-full shadow-md hover:bg-secondary hover:border-2  hover:border-dotted border-primary hover:text-primary">
+                <Button  className="mt-6 w-48 h-[42px] bg-primary text-white font-semibold rounded-full shadow-md hover:bg-secondary hover:border-2  hover:border-dotted border-primary hover:text-primary">
                     
                 <ArrowRight />More About Us
                 </Button>
 
 
- <Button  className="mt-6 w-[192px] h-[42px] hover:bg-primary hover:text-secondary font-semibold rounded-full shadow-md bg-white border-2 border-dotted border-primary text-primary">
+ <Button  className="mt-6 w-48 h-[42px] hover:bg-primary hover:text-secondary font-semibold rounded-full shadow-md bg-white border-2 border-dotted border-primary text-primary">
                     
                 <ArrowRight />More About Us
                 </Button>

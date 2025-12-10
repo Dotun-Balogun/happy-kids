@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Open_Sans, Concert_One } from "next/font/google";
 import "./globals.css";
-import Header from "./layout/Header";
 import Footer from "./layout/Footer";
+import FloatingContactButtons from "@/components/FloatingContactButton";
+import BackToTop from "@/components/BackToTop";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -42,6 +43,8 @@ export default function RootLayout({
       >
         
         {children}
+        <BackToTop/>
+        <FloatingContactButtons/>
         <Footer/>
       </body>
     </html>
