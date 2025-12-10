@@ -28,10 +28,10 @@ const OtherLayout = ({
   }, [])
 
   return (
-    <div className="relative min-h-screen flex flex-col bg-gradient-to-b from-white via-blue-50/30 to-white">
+    <div className="relative min-h-screen flex flex-col bg-linear-to-b from-white via-blue-50/30 to-white">
       {/* Scroll Progress Bar */}
       <motion.div
-        className="fixed top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-primary via-secondary to-primary z-[100]"
+        className="fixed top-0 left-0 right-0 h-1.5 bg-linear-to-r from-primary via-secondary to-primary z-100"
         style={{ 
           scaleX: scrollProgress / 100,
           transformOrigin: 'left'
