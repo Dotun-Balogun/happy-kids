@@ -5,6 +5,8 @@ import HeadingWithFaintText from '@/components/HeadingWithFaintText'
 import { statsData } from '@/app/data/StatData'
 import StatCard from '@/components/ui/cards/StatsCard'
 import SectionContainer from '@/components/SectionContainer'
+import MemberCard from '@/components/ui/cards/MemberCard'
+import {   membersData } from '@/app/data/membersData'
 
 const Aboutpage = () => {
   return (
@@ -71,14 +73,23 @@ const Aboutpage = () => {
       <SectionContainer waveColor='#ffe516' bgColor='#ffe516' topWave={true} bottomWave={true}>
 <div>
           <HeadingWithFaintText
-            faintText='Testimonials'
+            faintText='Members'
             faintTextClassName='top-2 left-1/2 -translate-x-1/2 text-primary text-[48px] font-bold opacity-10 lg:opacity-20'
           >
             <h2 className='text-[32px] md:text-4xl lg:text-[50px] font-concert-one font-bold text-center'>
-              What Our {" "} <span className='text-primary'>Happy Kids</span>{" "}Are Saying
+              Meet Our {" "} <span className='text-primary'>Experts</span>{" "} Teachers
             </h2>
           </HeadingWithFaintText>
     </div>
+    <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 lg:gap-4 place-items-center'>
+          {membersData.map((member, index) => (
+            <MemberCard 
+              key={member.id} 
+              member={member} 
+              index={index}
+            />
+          ))}
+        </div>
 
       </SectionContainer>
     </div>
