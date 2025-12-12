@@ -29,7 +29,7 @@ const ServiceCard = ({ service }: ServiceCardProps) => {
                    md:w-[332px] md:h-[332px] 
                    lg:w-[395px] lg:h-[395px] 
                    rounded-full p-2 border-2 border-dotted border-primary
-                   mx-auto overflow-hidde cursor-pointer'
+                   mx-auto overflow-hidden cursor-pointer'
         onHoverStart={() => setIsHovered(true)}
         onHoverEnd={() => setIsHovered(false)}
         onTapStart={() => setIsHovered(true)}
