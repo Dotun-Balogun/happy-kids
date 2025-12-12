@@ -7,10 +7,11 @@ import StatCard from '@/components/ui/cards/StatsCard'
 import SectionContainer from '@/components/SectionContainer'
 import MemberCard from '@/components/ui/cards/MemberCard'
 import {   membersData } from '@/app/data/membersData'
+import Partners from '@/components/sections/homepage/Partners'
 
 const Aboutpage = () => {
   return (
-    <div className='  min-h-screen py-20'>
+    <div className='  min-h-screen py-15 space-y-4'>
       <div className='container mx-auto px-4'>
         <div className='relative max-h-md'>
           <Image
@@ -81,7 +82,7 @@ const Aboutpage = () => {
             </h2>
           </HeadingWithFaintText>
     </div>
-    <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 lg:gap-4 place-items-center'>
+    <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 py-10 lg:gap-4 place-items-center'>
           {membersData.map((member, index) => (
             <MemberCard 
               key={member.id} 
@@ -92,6 +93,7 @@ const Aboutpage = () => {
         </div>
 
       </SectionContainer>
+      <Partners/>
     </div>
   )
 }
