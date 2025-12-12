@@ -33,5 +33,27 @@ export const servicesData: Service[] = [
     image: kid3,
     description: "Our preschool curriculum is designed to prepare children for their educational journey. Through play-based learning, social interaction, and creative exploration, we build foundational skills in literacy, numeracy, and critical thinking."
   },
+  {
+    id: 4,
+    title: "Pre",
+    highlightText: "School",
+    image: kid3,
+    description: "Our preschool curriculum is designed to prepare children for their educational journey. Through play-based learning, social interaction, and creative exploration, we build foundational skills in literacy, numeracy, and critical thinking."
+  },
+  {
+    id: 5,
+    title: "Pre",
+    highlightText: "School",
+    image: kid3,
+    description: "Our preschool curriculum is designed to prepare children for their educational journey. Through play-based learning, social interaction, and creative exploration, we build foundational skills in literacy, numeracy, and critical thinking."
+  },
+   {
+    id: 6,
+    title: "Pre",
+    highlightText: "School",
+    image: kid3,
+    description: "Our preschool curriculum is designed to prepare children for their educational journey. Through play-based learning, social interaction, and creative exploration, we build foundational skills in literacy, numeracy, and critical thinking."
+  },
+ 
  
 ]
